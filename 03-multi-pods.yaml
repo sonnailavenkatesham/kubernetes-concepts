@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multiPod
+spec:
+  containers:
+  - name: web1
+    image: nginx
+    ports:
+    - containerPort: 80
+      name: web1
+  - name: web2
+    image: nginx
+    ports:
+    - containerPort: 80
+      name: web2s
