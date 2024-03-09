@@ -11,7 +11,7 @@ spec:
       containerPort: 80
   - name: web2
     image: almalinux
-    command: 'sleep 200'
+    command: ["sleep", "200"]
     ports:
     - name: web2
       containerPort: 80
