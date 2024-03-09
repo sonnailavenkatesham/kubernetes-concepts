@@ -7,10 +7,12 @@ spec:
   - name: web1
     image: nginx
     ports:
-    - containerPort: 80
-      name: web1
+    - name: web1
+      containerPort: 80
   - name: web2
-    image: nginx
+    image: almalinux
+    command: 'sleep 200'
     ports:
-    - containerPort: 80
-      name: web2s
+    - name: web2
+      containerPort: 80
+     
