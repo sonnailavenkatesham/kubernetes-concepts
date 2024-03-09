@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labels
+  labels:
+    environment: dev
+    component: web
+spec:
+  containers:
+  - name: web
+    image: nginx
+    ports:
+    - name: web
+      containerPort: 80
+      protocol: TCP
