@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deployment-web
+  labels:
+    project: roboshop
+spec:
+  replicas: 2
+  selector:
+    matchLables:
+      project: roboshop
+      environment: dev
+      component: web
+  template:
+    metadat:
+      labels:
+        project: roboshop
+        environment: dev
+        component: web
+    spec:
+      containers:
+      - name: web
+        image: nginx
+        ports:
+        - name: http-web
+          containerPort: 80

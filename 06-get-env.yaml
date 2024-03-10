@@ -6,7 +6,7 @@ spec:
   containers:
   - name: web
     image: nginx
-    envfrom:
+    env:
     - name: person-name
       valueFrom:
         cofigMapKeyRef:

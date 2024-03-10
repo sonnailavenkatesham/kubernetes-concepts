@@ -1,0 +1,28 @@
+apiVerson: apps/v1
+kind: ReplicaSet
+metadata:   
+  name: replicaset-web
+  labels:
+    project: roboshop
+spec:
+  replicas: 2
+  selector:
+    matchLabel:
+      project: roboshop
+      environment: dev
+      component: web
+  template:
+    matadata:
+      labels:
+        project: roboshop
+        environment: dev
+        component: web
+    spec:
+      containers:
+      - name: web
+        image: nginx
+        ports:
+        - name: http-web
+          containerPort: 80
+      
+        
